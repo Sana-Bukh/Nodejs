@@ -36,4 +36,8 @@ const server = createServer((req, res) => {
         const itemId = parsedUrl.pathname.split('/').pop();
         req.on('data', chunk => {
           body += chunk.toString();
-        });
+        }); // DELETE Request
+    } else if (method === 'DELETE' && parsedUrl.pathname.startsWith('/api/items/')) {
+        const itemId = parsedUrl.pathname.split('/').pop();
+        res.statusCode = 200;
+        res.end(JSON.stringify({ message: `DELETE request - Deleting item ${itemId}` }));
