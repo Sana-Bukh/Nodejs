@@ -1,5 +1,5 @@
 import http from 'http';
-
+//server setup
 const server = http.createServer((req, res) => {
 const { method, url } = req;
 const parsedUrl = new URL(url, `http://${req.headers.host}`);
