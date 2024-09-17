@@ -9,9 +9,7 @@ const myServer = createServer((req, res) => {
     } else if (req.url === '/about') {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end('This is the About Page.');
-    }else if (req.url === '/Contact') {
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('This is the Contact Page.');
+    
     }
     else {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
