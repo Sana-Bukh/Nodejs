@@ -17,7 +17,6 @@ const myServer = createServer((req, res) => {
         //404page
     }
     else {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
         res.end('404 Not Found');
     }
 })
