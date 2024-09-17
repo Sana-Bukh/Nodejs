@@ -4,7 +4,7 @@ const server = http.createServer((req, res) => {
 const { method, url } = req;
 const parsedUrl = new URL(url, `http://${req.headers.host}`);
 
-// Set response header to JSON
+// Set JSON response header
 res.setHeader('Content-Type', 'application/json');
 
 // GET Request
