@@ -41,3 +41,10 @@ const server = createServer((req, res) => {
         const itemId = parsedUrl.pathname.split('/').pop();
         res.statusCode = 200;
         res.end(JSON.stringify({ message: `DELETE request - Deleting item ${itemId}` }));
+        
+        // Handle 404 Not Found
+    } else {
+        res.statusCode = 404;
+        res.end(JSON.stringify({ message: 'Route not found' }));
+    }
+    
